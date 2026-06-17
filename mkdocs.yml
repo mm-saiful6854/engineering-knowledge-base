@@ -1,0 +1,65 @@
+site_name: Engineering Knowledge Base
+site_description: Practical software engineering notes for revision, practice, and community learning.
+site_url: https://mm-saiful6854.github.io/engineering-knowledge-base/
+repo_url: https://github.com/mm-saiful6854/engineering-knowledge-base
+repo_name: mm-saiful6854/engineering-knowledge-base
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: teal
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - System Design:
+      - system-design/index.md
+      - Foundations: system-design/foundations.md
+      - HTTP, RPC, gRPC, and JSON-RPC: system-design/http-rpc-grpc-json-rpc.md
+      - REST: system-design/rest.md
+      - SOAP: system-design/soap.md
+      - Server-Sent Events: system-design/server-sent-events.md
+      - Single Sign-On and OAuth: system-design/sso-oauth.md
+      - Stateful and Stateless Architecture: system-design/stateful-stateless.md
+      - Multi-Tenant Architecture: system-design/multi-tenant-architecture.md
+      - Domain-Driven Design: system-design/domain-driven-design.md
+      - UML: system-design/uml.md
+      - Object-Oriented Programming: system-design/oop.md
+      - Design Patterns:
+          - system-design/design-patterns/index.md
+          - Command Pattern: system-design/design-patterns/command.md
+          - CQRS: system-design/design-patterns/cqrs.md
+          - Transaction Idempotency: system-design/design-patterns/transaction-idempotency.md
+  - Database: database/index.md
+  - Backend: backend/index.md
+  - Programming Fundamentals: programming-fundamentals/index.md
+  - DevOps: devops/index.md
